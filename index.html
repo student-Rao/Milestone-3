@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume-Builder</title>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading header:', error));
+    });
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="mainpart1">
+         <p>Enhancv’s <span> Resume Builder </span> helps you get hired at top companies</p>
+         <!-- <Link href={'create-resume'}> -->
+         <button><a href="resumeCreated.html">Build Your Resume</a></button>
+         <!-- </Link> -->
+         <div class="text2"><b>Loved by interviewers at :</b></div>
+         <div class="mainlogos">
+          <li><i>GOOGLE</i></li>
+          <li><i>FACEBOOK</i></li>
+          <li><i>TESLA</i></li>
+          <li><i>SPOTIFY</i></li>
+          <li><i>AMAZON</i></li>
+         </div>
+        </div>
+        <div class="mainpart2">
+         <img src="resumeimage.jpeg" alt="" id="resumeimage" />
+ 
+        </div>
+     </main>
+     <div id="footer-placeholder"></div>
+</body>
+</html>

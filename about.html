@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="about.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+        });
+        
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    });
+
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <div class="aboutpage">
+        <h1>About Us</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In necessitatibus voluptate laboriosam earum illum eveniet id cumque error natus ipsa ipsam, distinctio laborum aspernatur perspiciatis amet aperiam doloremque aliquid aut?
+        Provident repellat praesentium vel amet dolores aliquid cumque accusamus saepe corrupti accusantium eius reprehenderit voluptatum inventore cupiditate veritatis, quae distinctio? Eius omnis nesciunt placeat aliquid saepe vero aperiam recusandae expedita?
+        Voluptates ratione autem, tempora iusto harum minima error assumenda at hic sint dicta, unde officiis labore esse cum, rerum ipsam. Temporibus, repellendus assumenda sequi omnis odit atque doloremque. Eum, error!</p>
+
+        <button><i class="ri-phone-line"></i>Book a Free consultation</button>
+        </div>
+        <div id="footer-placeholder"></div>
+</body>
+</html>

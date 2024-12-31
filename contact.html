@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    });
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <div class="contactpage">
+    <div class="contactform">
+        <h1>Contact Us</h1>
+        <label id="contactformname">
+            <input type="text" placeholder='Enter Name' id="name" />
+        </label>
+        <label id="contactformemail">
+            <input type="email" placeholder='Enter Email' id="email" />
+        </label>
+        <label id="contactformmessage">
+            <textarea name="" id="message" placeholder="Message"></textarea>
+        </label><div class="btn">
+        <button><i class="ri-arrow-right-line"></i> Submint</button>
+    </div>
+    </div>
+</div>
+<div id="footer-placeholder"></div>
+
+</body>
+</html>

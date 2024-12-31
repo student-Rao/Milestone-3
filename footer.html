@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="footer.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+</head>
+<body>
+    <footer>
+        <div class="foooterpart1">
+       
+            <div id="footerpart1boxes" class="box1">
+                <h1>About Us</h1>
+                <li>Company</li>
+                <li>Careers</li>
+                <li>Reviews</li>
+            </div>
+            <div id="footerpart1boxes" class="box2">
+                <h1>Contact Us</h1>
+                <li>support@enhancv.com</li>
+                <li>Help</li>
+            </div>
+            <div id="footerpart1boxes" class="box3">
+                <h1>Information</h1>
+                <li class="accounticon"><i class="ri-linkedin-box-fill"></i></li>
+                <li class="accounticon"><i class="ri-facebook-box-fill"></i></li>
+                <li class="accounticon"><i class="ri-twitter-fill"></i></li>
+                <li class="accounticon"><i class="ri-instagram-line"></i></li>
+            </div>
+            <div id="footerpart1boxes" class="box4">
+            <h1>Languages</h1>
+            <li>English (UK)</li>
+            <li>French (FR)</li>
+            <li>German (GR)</li>
+            <li>Spanish (EP)</li>
+            <li>Swedish (SE)</li>
+            </div>
+        </div>
+        <div class="foooterpart2">
+            <div>Made with love by people who care <i class="ri-copyright-line">2024. All rights reserved.</i></div>
+        </div>
+    </footer>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    });
+</script>
+</body>
+</html>

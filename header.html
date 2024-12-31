@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="header.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+
+</head>
+<body>
+    <nav class="navbar">
+        <ul id="sidebar">
+            <li id="crossicon"><i class="ri-xrp-line" onclick="hidesidebar()"></i></li>
+            <li class="links"><a href="index.html">Home</a></li>
+            <li class="links"><a href="about.html">About</a></li>
+            <li class="links"><a href="contact.html">Contact Us</a></li>
+            <li class="links"><a href="resumeCreated.html">Create Resume</a></li>
+        </ul>
+        <ul>
+            <li><img src="WebsiteLogo.webp"  height="100px" width="130px" id="mainlogo"/></li>
+            <li class="links" id="bigscreenlink"><a href="index.html">Home</a></li>
+            <li class="links" id="bigscreenlink"><a href="about.html">About</a></li>
+            <li class="links" id="bigscreenlink"><a href="contact.html">Contact Us</a></li>
+            <li class="links" id="bigscreenlink"><a href="resumeCreated.html">Create Resume</a></li>
+            <li id="menuicon"> <i class="ri-menu-line" onclick="showsidebar()" ></i></li>
+        </ul>
+    </nav>
+
+    <script>
+       
+        document.addEventListener("DOMContentLoaded", function() {
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading header:', error));
+    });
+    function showsidebar(){
+            const sidebar=document.querySelector("#sidebar") 
+            sidebar.style.display="flex"
+        }
+        function hidesidebar(){
+            const sidebar=document.querySelector("#sidebar")
+            sidebar.style.display="none"
+        }
+    </script>
+</body>
+
+</html>

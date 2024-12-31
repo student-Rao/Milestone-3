@@ -1,0 +1,136 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+.contactpage{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contactform{
+    height: 75vh;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+    border: 2px solid white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.contactform h1{
+    font-size: 50px;
+    font-weight: 600;
+    /* padding: 20px; */
+    /* padding-left: 50px; */
+}
+
+#name{
+    height: 40px;
+    width: 60%;
+    padding-left: 5px;
+    font-size: 15px;
+    /* margin-left: 50px; */
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+#email{
+    height: 40px;
+    width: 60%;
+    padding-left: 5px;
+    border: none;
+    font-size: 15px;
+
+    border-bottom: 1px solid black;
+}
+
+#message{
+    /* margin-left: 50px; */
+    padding-left: 5px;
+    font-size: 15px;
+    border: 1px solid black;
+    height: 80px;
+    width: 60%;
+}
+
+
+.contactform button{
+    height: 40px;
+    width: 150px;
+    /* margin-left: 13vw; */
+    border: 0.5px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.contactform button:hover{
+    transform: scale(1.09);
+    animation-duration: 1ms;
+}
+
+@media only screen and (max-width:460px){
+    .contactform{
+        height: 80vh;
+        width: 100%;
+        gap: 30px;
+    }
+    #message{
+        width: 80%;
+    }
+    #name{
+        width: 80%;
+    }
+    #email{
+        width: 80%;
+    }
+    .btn{
+        display: flex;
+        justify-content: center;
+    }
+    .btn{
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+
+@media only screen and (min-width:460px) and (max-width:768px){
+    .contactform{
+        height: 80vh;
+        width: 70%;
+        gap: 30px;
+    }
+   
+    .btn{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media only screen and (min-width:768px){
+    .contactform{
+        height: 80vh;
+        width: 50%;
+        gap: 30px;
+    }
+    #message{
+        width: 50%;
+    }
+    #name{
+        width: 50%;
+    }
+    #email{
+        width: 50%;
+    }
+    .btn{
+        display: flex;
+        justify-content: center;
+    }
+    
+}
